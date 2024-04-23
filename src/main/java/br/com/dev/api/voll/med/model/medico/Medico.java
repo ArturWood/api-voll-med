@@ -1,5 +1,7 @@
 package br.com.dev.api.voll.med.model.medico;
 
+import br.com.dev.api.voll.med.dto.medico.MedicoRequestDto;
+import br.com.dev.api.voll.med.dto.medico.MedicoUpdateDto;
 import br.com.dev.api.voll.med.model.endereco.Endereco;
 import jakarta.persistence.*;
 
@@ -20,6 +22,16 @@ public class Medico {
     private Boolean ativo;
 
     public Medico() {
+    }
+
+    public Medico(MedicoRequestDto dto) {
+        this.ativo = true;
+        this.nome = dto.nome();
+        this.email = dto.email();
+        this.telefone = dto.telefone();
+        this.crm = dto.crm();
+        this.especialidade = dto.especialidade();
+        this.endereco = new Endereco(dto.endereco());
     }
 
     public Long getId() {
@@ -52,5 +64,17 @@ public class Medico {
 
     public Boolean getAtivo() {
         return ativo;
+    }
+
+    public void atualizaDados(MedicoUpdateDto dto) {
+        this.nome = dto.nome() != null ? dto.nome() : this.nome;
+        this.telefone = dto.telefone() != null ? dto.telefone() : this.telefone;
+        if (dto.endereco() != null) {
+            this.endereco.atualizaDados(dto.endereco());
+        }
+    }
+
+    public void inativar() {
+        this.ativo = false;
     }
 }
