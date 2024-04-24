@@ -13,6 +13,11 @@ public class ExceptionEntityHandler {
         return ResponseEntity.notFound().build();
     }
 
+    @ExceptionHandler(PacienteNotFoundException.class)
+    public ResponseEntity handlePacienteNotFound() {
+        return ResponseEntity.notFound().build();
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
         var erros = ex.getFieldErrors();
