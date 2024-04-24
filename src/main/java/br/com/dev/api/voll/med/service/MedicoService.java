@@ -45,7 +45,7 @@ public class MedicoService {
         return this.getMedico(id);
     }
 
-    public Medico getMedico(Long id) {
+    private Medico getMedico(Long id) {
         return medicoRepository.findById(id).orElseThrow(() -> new MedicoNotFoundException("Não encontrado medico com ID: " + id));
     }
 }
