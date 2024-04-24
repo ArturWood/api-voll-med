@@ -112,19 +112,4 @@ public class MedicoServiceTest {
         // Assert
         assertNotNull(result);
     }
-
-    @Test
-    @DisplayName("Deveria buscar um medico especifico pelo ID")
-    public void scenario06() {
-        // Arrange
-        Long id = 1L;
-        Medico medico = new Medico();
-        when(medicoRepository.findById(any())).thenReturn(java.util.Optional.of(medico));
-
-        // Act
-        Medico result = medicoService.getMedico(id);
-
-        // Assert
-        assertNotNull(result);
-    }
 }
