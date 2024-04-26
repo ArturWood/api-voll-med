@@ -42,23 +42,23 @@ cd api-voll-med
 A aplicação expõe os seguintes endpoints:
 
 - Médicos `/medicos`
-- `GET`: Retorna uma lista paginada dos médicos cadastrados.
-- `POST`: Cadastra um novo médico com os detalhes fornecidos no corpo da solicitação.
-- `PUT`: Atualiza as informações de um médico existente com base nos detalhes fornecidos no corpo da solicitação.
-- `DELETE /{id}`: Realiza a exclusão lógica (inativação) do médico com o ID fornecido.
-- `GET /{id}`: Retorna os detalhes do médico específico com o ID fornecido.
+  - `GET`: Retorna uma lista paginada dos médicos cadastrados.
+  - `POST`: Cadastra um novo médico com os detalhes fornecidos no corpo da solicitação.
+  - `PUT`: Atualiza as informações de um médico existente com base nos detalhes fornecidos no corpo da solicitação.
+  - `DELETE /{id}`: Realiza a exclusão lógica (inativação) do médico com o ID fornecido.
+  - `GET /{id}`: Retorna os detalhes do médico específico com o ID fornecido.
 
 - Pacientes `/pacientes`
-- `GET`: Retorna uma lista paginada dos pacientes cadastrados.
-- `POST`: Cadastra um novo paciente com os detalhes fornecidos no corpo da solicitação.
-- `PUT`: Atualiza as informações de um paciente existente com base nos detalhes fornecidos no corpo da solicitação.
-- `DELETE /{id}`: Realiza a exclusão lógica (inativação) do paciente com o ID fornecido.
-- `GET /{id}`: Retorna os detalhes do paciente específico com o ID fornecido.
+  - `GET`: Retorna uma lista paginada dos pacientes cadastrados.
+  - `POST`: Cadastra um novo paciente com os detalhes fornecidos no corpo da solicitação.
+  - `PUT`: Atualiza as informações de um paciente existente com base nos detalhes fornecidos no corpo da solicitação.
+  - `DELETE /{id}`: Realiza a exclusão lógica (inativação) do paciente com o ID fornecido.
+  - `GET /{id}`: Retorna os detalhes do paciente específico com o ID fornecido.
 
 - Consultas `/consultas`
-- `POST`: Agenda uma nova consulta com os detalhes fornecidos no corpo da solicitação.
-- `DELETE /{id}`: Cancela uma consulta com base nos detalhes fornecidos no corpo da solicitação.
-- `GET /{id}`: Retorna os detalhes de uma consulta específica com o ID fornecido.
+  - `POST`: Agenda uma nova consulta com os detalhes fornecidos no corpo da solicitação.
+  - `DELETE /{id}`: Cancela uma consulta com base nos detalhes fornecidos no corpo da solicitação.
+  - `GET /{id}`: Retorna os detalhes de uma consulta específica com o ID fornecido.
 
 ## Estrutura do Projeto
 
