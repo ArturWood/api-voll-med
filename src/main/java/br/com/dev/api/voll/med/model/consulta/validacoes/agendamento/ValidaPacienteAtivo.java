@@ -13,7 +13,7 @@ public class ValidaPacienteAtivo implements ValidadorDeAgendamento {
 
     @Override
     public void validar(ConsultaRequestDto dto) {
-        if (!pacienteRepository.existsByAtivoTrueWithId(dto.idPaciente()))
+        if (!pacienteRepository.existsByAtivoTrueAndId(dto.idPaciente()))
             throw new ValidacaoAgendamentoException("Consulta não pode ser agendada com paciente excluído");
     }
 }
